@@ -1,0 +1,40 @@
+plugins {
+    id 'org.jetbrains.kotlin.jvm' version '1.4.10'
+    // spring boot
+    id 'org.springframework.boot' version '2.1.5.RELEASE'
+    // auto open (inheritance)
+    id "org.jetbrains.kotlin.plugin.spring" version "1.3.30"
+    // auto JPA
+    id 'org.jetbrains.kotlin.plugin.jpa' version '1.3.30'
+}
+
+// skip library version about spring boot library
+apply plugin: 'io.spring.dependency-management'
+
+group 'com.example'
+version '1.0-SNAPSHOT'
+
+// entity makes auto inheritance class
+allOpen {
+    annotation("javax.persistence.Entity")
+}
+
+repositories {
+    mavenCentral()
+}
+
+compileKotlin {
+    kotlinOptions.jvmTarget = "1.8"
+}
+
+compileTestKotlin {
+    kotlinOptions.jvmTarget = '1.8'
+}
+
+dependencies {
+    implementation "org.jetbrains.kotlin:kotlin-stdlib"
+    // spring boot about web
+    implementation "org.springframework.boot:spring-boot-starter-web"
+    // kotlin reflection
+    implementation "org.jetbrains.kotlin:kotlin-reflect"
+}
