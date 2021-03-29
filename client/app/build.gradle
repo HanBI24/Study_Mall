@@ -36,6 +36,11 @@ ext {
     anko_version = '0.10.8'
     retrofit_version = '2.6.0'
     okhttp_version = '3.8.0'
+    lifecycle_version = "2.3.1"
+    arch_version = "2.1.0"
+    activity_version = "1.2.2"
+    anko_mvvm = "0.1.0"
+    arch_version = '2.2.0'
 }
 
 dependencies {
@@ -61,4 +66,11 @@ dependencies {
     // okhttp3
     implementation "com.squareup.okhttp3:okhttp:$okhttp_version"
     implementation "com.squareup.okhttp3:logging-interceptor:$okhttp_version"
+
+    implementation "androidx.lifecycle:lifecycle-extensions:$arch_version"
+    implementation "androidx.lifecycle:lifecycle-viewmodel-ktx:$lifecycle_version"
+    implementation "androidx.lifecycle:lifecycle-livedata-ktx:$lifecycle_version"
+    implementation "androidx.lifecycle:lifecycle-runtime-ktx:$lifecycle_version"
+    implementation "androidx.activity:activity-ktx:$activity_version"
+    implementation 'com.github.benimario:ankomvvm:0.1.0'
 }

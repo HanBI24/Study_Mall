@@ -10,7 +10,7 @@ import org.springframework.web.bind.annotation.RequestMapping
 import org.springframework.web.bind.annotation.RestController
 
 @RestController
-@RequestMapping("/api/vl")
+@RequestMapping("/api/v1")
 class UserApiController @Autowired constructor(
     private val signupService: SignupService
 ){
