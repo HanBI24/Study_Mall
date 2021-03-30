@@ -44,4 +44,7 @@ dependencies {
 
     // bcrypt
     implementation 'org.mindrot:jbcrypt:0.4'
+
+    // jwt
+    implementation 'com.auth0:java-jwt:3.8.1'
 }
