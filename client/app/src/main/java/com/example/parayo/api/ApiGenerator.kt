@@ -1,6 +1,7 @@
 package com.example.parayo.api
 
-import android.os.Build.HOST
+import com.example.parayo.EC2PublicIP
+import com.example.parayo.R
 import okhttp3.OkHttpClient
 import okhttp3.logging.HttpLoggingInterceptor
 import retrofit2.Retrofit
@@ -9,7 +10,7 @@ import retrofit2.converter.gson.GsonConverterFactory
 class ApiGenerator {
     companion object {
         // 에뮬에서 로컬호스트에 띄운 서버를 지칭할 때 사용하는 ip
-        const val HOST = "http://10.0.2.2:8080"
+        const val HOST = EC2PublicIP.ec2_public_ip
     }
 
     fun <T> generate(api: Class<T>): T = Retrofit.Builder()
